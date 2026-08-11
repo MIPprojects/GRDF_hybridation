@@ -1,0 +1,8 @@
+# Ce qui n'a pas à partir dans l'image Cloud Run
+.git/
+.gitignore
+.claude/
+.DS_Store
+node_modules/
+tools/
+README.md

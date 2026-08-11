@@ -1,0 +1,14 @@
+{
+  "name": "grdf-frise-digitale",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Frise digitale interactive GRDF/CAPEB — 7 solutions gaz, quiz et mode animateur",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server/server.mjs",
+    "test": "node tools/test-qrcode.mjs && node tools/test-salon.mjs",
+    "test:qr": "node tools/test-qrcode.mjs",
+    "test:salon": "node tools/test-salon.mjs"
+  }
+}

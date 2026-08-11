@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0A4176">
+  <title>Rejoindre la partie — Frise digitale GRDF</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/jeu.css">
+</head>
+<body class="jeu joueur">
+  <div class="fond-illustre" aria-hidden="true"></div>
+
+  <main class="plaque verre">
+
+    <!-- Connexion -->
+    <section class="ecran est-actif" id="ecranEntree">
+      <div class="jeu-entete">
+        <div class="jeu-entete__filet"></div>
+        <div>
+          <h1>Rejoindre la partie</h1>
+          <p>Choisir le gaz, c'est choisir l'avenir</p>
+        </div>
+      </div>
+
+      <form class="joueur-form" id="formEntree">
+        <div class="champ">
+          <label for="champCode">Code de partie</label>
+          <input id="champCode" name="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+                 autocomplete="off" placeholder="······" required>
+        </div>
+        <div class="champ">
+          <label for="champPseudo">Votre pseudo</label>
+          <input id="champPseudo" name="pseudo" maxlength="16" autocomplete="nickname"
+                 placeholder="Au hasard si vide">
+        </div>
+        <button class="btn btn--jaune" type="submit" style="justify-content:center">Entrer dans la partie</button>
+        <div class="alerte" id="entreeAlerte"></div>
+      </form>
+    </section>
+
+    <!-- Salle d'attente -->
+    <section class="ecran" id="ecranAttente">
+      <div class="attente">
+        <div class="attente__anneau" aria-hidden="true"></div>
+        <p id="attenteTexte">Vous êtes dans la partie. En attente de l'animateur…</p>
+        <p style="font-size:.82rem;color:var(--encre-douce)">
+          Pseudo : <b id="attentePseudo"></b>
+        </p>
+      </div>
+    </section>
+
+    <!-- Question -->
+    <section class="ecran" id="ecranQuestion">
+      <div class="progression">
+        <span id="jProgression"></span>
+        <div class="progression__piste"><div class="progression__barre" id="jBarre"></div></div>
+        <span id="jChrono"></span>
+      </div>
+      <h2 class="question__texte" id="jQuestion" style="font-size:1.05rem;margin-bottom:1rem"></h2>
+      <div class="joueur-reponses" id="jReponses"></div>
+      <div class="alerte" id="jAlerte"></div>
+    </section>
+
+    <!-- Réponse envoyée -->
+    <section class="ecran" id="ecranEnvoye">
+      <div class="attente">
+        <div class="attente__anneau" aria-hidden="true"></div>
+        <p>Réponse enregistrée.</p>
+        <p style="font-size:.85rem;color:var(--encre-douce)">Regardez l'écran principal…</p>
+      </div>
+    </section>
+
+    <!-- Verdict -->
+    <section class="ecran" id="ecranVerdict">
+      <div class="verdict">
+        <div class="verdict__icone" id="verdictIcone" aria-hidden="true"></div>
+        <p class="verdict__titre" id="verdictTitre"></p>
+        <p class="verdict__points" id="verdictPoints"></p>
+        <p class="verdict__rang" id="verdictRang"></p>
+      </div>
+    </section>
+
+    <!-- Fin -->
+    <section class="ecran" id="ecranFin">
+      <div class="verdict">
+        <div class="verdict__icone" id="finIcone" aria-hidden="true">🏁</div>
+        <p class="verdict__titre" id="finTitre"></p>
+        <p class="verdict__points" id="finScore"></p>
+      </div>
+      <div class="podium" id="finPodium"></div>
+      <div class="jeu-pied">
+        <span class="score"></span>
+        <a class="btn btn--fantome" href="index.html">Explorer la frise</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/play.js"></script>
+</body>
+</html>

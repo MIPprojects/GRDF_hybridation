@@ -1,0 +1,107 @@
+{
+  "_doc": "Réglages globaux du prototype. Tout est éditable ici sans toucher au code.",
+
+  "titre": "Choisir le gaz, c'est choisir l'avenir",
+  "sousTitre": "À chaque bâtiment sa solution gaz",
+  "accroche": "Cliquez sur une cible du quartier pour découvrir la solution installée.",
+  "signature": "GRDF · CAPEB",
+
+  "visuel": {
+    "image": "assets/ville.png",
+    "imageBasseDef": "assets/ville-lowres.png",
+    "ratio": 1.7777777778,
+    "_doc_hotspot": "Les positions des cibles sont dans solutions.json (clé hotspot), en % de la largeur/hauteur du visuel. Éditables à la souris via le mode E (éditeur de cibles)."
+  },
+
+  "theme": {
+    "_doc": "Couleurs relevées directement dans l'illustration source.",
+    "bleu": "#0068A0",
+    "bleuProfond": "#0A4176",
+    "bleuNuit": "#062A4D",
+    "cyan": "#10A8D0",
+    "bleuPale": "#D0E0F8",
+    "vert": "#71B857",
+    "vertDoux": "#90C898",
+    "vertPale": "#E9F2E1",
+    "jaune": "#FAB200",
+    "blanc": "#FFFFFF"
+  },
+
+  "metriques": [
+    {
+      "id": "economies",
+      "libelle": "Économies d'énergie",
+      "aide": "Baisse de consommation attendue par rapport à une ancienne chaudière.",
+      "couleur": "#0068A0"
+    },
+    {
+      "id": "dpe",
+      "libelle": "Gain d'étiquette DPE",
+      "aide": "Nombre de classes gagnées au diagnostic de performance énergétique.",
+      "couleur": "#10A8D0"
+    },
+    {
+      "id": "co2",
+      "libelle": "Réduction CO₂",
+      "aide": "Baisse des émissions de gaz à effet de serre du logement.",
+      "couleur": "#71B857"
+    },
+    {
+      "id": "enr",
+      "libelle": "Part d'énergie renouvelable",
+      "aide": "Place des ENR (solaire, bois, aérothermie) dans la solution.",
+      "couleur": "#90C898"
+    },
+    {
+      "id": "budget",
+      "libelle": "Accessibilité budget",
+      "aide": "Échelle inversée : plus la barre est longue, plus l'investissement est contenu.",
+      "couleur": "#FAB200"
+    }
+  ],
+
+  "echelleMetriques": {
+    "max": 5,
+    "legendeDocument": "Chiffre issu du document source",
+    "legendeEstimation": "Positionnement indicatif — à valider avec GRDF",
+    "avertissement": "Les barres traduisent un positionnement relatif des 7 solutions entre elles. Les valeurs marquées d'un point plein sont chiffrées dans le document source ; les autres sont des estimations de mise en scène, à arbitrer avec GRDF avant diffusion."
+  },
+
+  "contexte": {
+    "titre": "En amont : les gaz renouvelables",
+    "chapo": "Les 7 solutions sont alimentées par un réseau gaz qui verdit. Deux filières y injectent du gaz renouvelable.",
+    "sources": [
+      {
+        "nom": "Méthanisation",
+        "texte": "Des déchets organiques agricoles fermentent en digesteur et produisent du biométhane, injecté dans le réseau après épuration.",
+        "reperes": "Exploitations agricoles"
+      },
+      {
+        "nom": "Méthanation",
+        "texte": "L'électricité renouvelable excédentaire (éolien, solaire) sert à produire de l'hydrogène, combiné à du CO₂ pour former du méthane de synthèse.",
+        "reperes": "Éolien + unité industrielle"
+      }
+    ]
+  },
+
+  "quiz": {
+    "titre": "Testez vos connaissances",
+    "sousTitre": "7 solutions gaz, 12 questions",
+    "nbQuestions": 12,
+    "melangerQuestions": true,
+    "melangerReponses": true,
+    "secondesParQuestion": 25,
+    "pointsBase": 1000,
+    "pointsVitesse": 500
+  },
+
+  "live": {
+    "_doc": "Mode animateur type Kahoot!. Le serveur doit tourner (voir README).",
+    "titre": "Mode animateur",
+    "nomSalle": "Frise GRDF",
+    "urlPublique": "",
+    "_doc_urlPublique": "Laisser vide : le QR code utilise alors l'adresse IP locale détectée par le serveur. Renseigner pour forcer une URL (tunnel, domaine…).",
+    "pseudoMaxLongueur": 16,
+    "joueursMax": 200
+  }
+}

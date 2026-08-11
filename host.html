@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mode animateur — Frise digitale GRDF</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/jeu.css">
+</head>
+<body class="jeu">
+  <div class="fond-illustre" aria-hidden="true"></div>
+
+  <main class="plaque plaque--large verre">
+
+    <!-- Salon d'attente : QR code + liste des joueurs -->
+    <section class="ecran est-actif" id="ecranSalon">
+      <div class="jeu-entete">
+        <div class="jeu-entete__filet"></div>
+        <div>
+          <h1 id="salonTitre">Mode animateur</h1>
+          <p id="salonSousTitre">Ouverture de la partie…</p>
+        </div>
+        <div class="jeu-entete__actions">
+          <a class="btn btn--fantome" href="index.html">← La frise</a>
+        </div>
+      </div>
+
+      <div class="salon">
+        <div class="salon__connexion">
+          <div class="salon__qr" id="qr" aria-label="QR code de connexion à la partie"></div>
+          <p class="salon__url" id="salonUrl"></p>
+          <p class="salon__etiquette">Ou code de partie</p>
+          <div class="salon__code" id="salonCode">······</div>
+        </div>
+
+        <div class="salon__joueurs">
+          <div class="salon__compte"><span id="salonNb">0</span> <span>joueur(s) connecté(s)</span></div>
+          <div class="pastilles" id="salonPastilles"></div>
+          <p class="salon__vide" id="salonVide">
+            Faites scanner le QR code par les participants. Chacun choisit un pseudo,
+            puis apparaît ici. Vous pourrez lancer la partie dès le premier joueur connecté.
+          </p>
+          <div class="alerte" id="salonAlerte"></div>
+          <div class="jeu-pied">
+            <span class="score" id="salonInfos"></span>
+            <button class="btn btn--jaune" id="btnLancer" disabled>Lancer la partie</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Question projetée -->
+    <section class="ecran" id="ecranQuestion">
+      <div class="progression">
+        <span id="hProgressionTexte"></span>
+        <div class="progression__piste"><div class="progression__barre" id="hProgressionBarre"></div></div>
+        <span id="hRepondants"></span>
+        <div class="chrono" id="chrono">
+          <svg viewBox="0 0 44 44" aria-hidden="true">
+            <circle class="chrono__piste" cx="22" cy="22" r="18"></circle>
+            <circle class="chrono__jauge" id="chronoJauge" cx="22" cy="22" r="18"></circle>
+          </svg>
+          <span class="chrono__texte" id="chronoTexte">–</span>
+        </div>
+      </div>
+
+      <span class="question__theme" id="hTheme"></span>
+      <h2 class="question__texte" id="hQuestion"></h2>
+      <div class="reponses" id="hReponses"></div>
+
+      <div class="explication" id="hExplication">
+        <div><div class="explication__contenu"><p style="margin:0" id="hExplicationTexte"></p></div></div>
+      </div>
+
+      <div class="jeu-pied">
+        <span class="score" id="hScoreInfo"></span>
+        <button class="btn btn--fantome" id="btnReveler">Révéler la réponse</button>
+        <button class="btn btn--jaune" id="btnSuivante" hidden>Question suivante</button>
+      </div>
+    </section>
+
+    <!-- Classement intermédiaire -->
+    <section class="ecran" id="ecranClassement">
+      <div class="jeu-entete">
+        <div class="jeu-entete__filet"></div>
+        <div><h1>Classement</h1><p id="clSousTitre"></p></div>
+      </div>
+      <div class="podium" id="clPodium"></div>
+      <div class="jeu-pied">
+        <span class="score"></span>
+        <button class="btn btn--jaune" id="btnSuivante2">Question suivante</button>
+      </div>
+    </section>
+
+    <!-- Fin de partie -->
+    <section class="ecran" id="ecranFin">
+      <div class="jeu-entete">
+        <div class="jeu-entete__filet"></div>
+        <div><h1>Podium</h1><p>Merci à toutes et tous !</p></div>
+        <div class="jeu-entete__actions"><a class="btn btn--fantome" href="index.html">← La frise</a></div>
+      </div>
+      <div class="podium" id="finPodium"></div>
+      <div class="jeu-pied">
+        <span class="score"></span>
+        <button class="btn btn--jaune" id="btnRelancer">Nouvelle partie</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/host.js"></script>
+</body>
+</html>

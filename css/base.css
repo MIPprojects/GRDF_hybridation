@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Socle commun : jetons de style, verre dépoli, boutons, barres de métriques.
+   Palette relevée directement dans l'illustration source (voir data/config.json).
+   ========================================================================== */
+
+:root {
+  --bleu: #0068a0;
+  --bleu-profond: #0a4176;
+  --bleu-nuit: #062a4d;
+  --cyan: #10a8d0;
+  --bleu-pale: #d0e0f8;
+  --vert: #71b857;
+  --vert-doux: #90c898;
+  --vert-pale: #e9f2e1;
+  --jaune: #fab200;
+
+  --encre: #0b2f52;
+  --encre-douce: #4a6a88;
+  --trait: rgba(10, 65, 118, 0.14);
+
+  /* Verre dépoli — la teinte reste très claire pour laisser lire l'illustration.
+     Le reflet diagonal est une couche de fond et non un pseudo-élément : un
+     ::before absolu se peindrait par-dessus le contenu non positionné et
+     voilerait le texte et les boutons. */
+  --verre-reflet: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 26%,
+    rgba(255, 255, 255, 0) 72%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  --verre-teinte: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.82) 0%,
+    rgba(240, 247, 253, 0.66) 45%,
+    rgba(226, 239, 250, 0.6) 100%
+  );
+  --verre-fond: var(--verre-reflet), var(--verre-teinte);
+  --verre-bord: rgba(255, 255, 255, 0.85);
+  --verre-flou: saturate(155%) blur(26px);
+  --verre-ombre:
+    0 32px 80px -24px rgba(6, 42, 77, 0.42),
+    0 4px 18px -6px rgba(6, 42, 77, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+
+  --rayon: 22px;
+  --rayon-s: 12px;
+
+  --police: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --transition: 460ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+
+/* L'attribut hidden doit l'emporter sur les display posés par les classes
+   (.btn est en inline-flex, sinon il resterait visible). */
+[hidden] { display: none !important; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--police);
+  color: var(--encre);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------- Verre --- */
+
+.verre {
+  background: var(--verre-fond);
+  -webkit-backdrop-filter: var(--verre-flou);
+  backdrop-filter: var(--verre-flou);
+  border: 1px solid var(--verre-bord);
+  border-radius: var(--rayon);
+  box-shadow: var(--verre-ombre);
+}
+
+/* Repli si backdrop-filter n'est pas géré : on opacifie pour rester lisible */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .verre {
+    background:
+      var(--verre-reflet),
+      linear-gradient(155deg, rgba(255, 255, 255, 0.97), rgba(232, 242, 251, 0.95));
+  }
+}
+
+/* ------------------------------------------------------------- Boutons --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.72em 1.25em;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background: var(--bleu);
+  color: #fff;
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  box-shadow: 0 6px 18px -6px rgba(0, 104, 160, 0.6);
+}
+.btn:hover { background: #0a76b4; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn:disabled,
+.btn[disabled] {
+  background: rgba(10, 65, 118, 0.12);
+  color: rgba(11, 47, 82, 0.45);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn--fantome {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--bleu-profond);
+  border-color: rgba(10, 65, 118, 0.18);
+  box-shadow: none;
+}
+.btn--fantome:hover { background: rgba(255, 255, 255, 0.85); }
+
+.btn--jaune { background: var(--jaune); color: #4a3300; box-shadow: 0 6px 18px -6px rgba(250, 178, 0, 0.7); }
+.btn--jaune:hover { background: #ffc22a; }
+
+.btn--vert { background: var(--vert); box-shadow: 0 6px 18px -6px rgba(113, 184, 87, 0.7); }
+.btn--vert:hover { background: #7fc665; }
+
+.btn--icone {
+  width: 2.6rem; height: 2.6rem;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* ------------------------------------------------- Barres de métriques --- */
+
+.metriques { display: grid; gap: 0.62rem; }
+
+.metrique {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "nom valeur" "piste piste";
+  align-items: baseline;
+  gap: 0.2rem 0.6rem;
+}
+
+.metrique__nom {
+  grid-area: nom;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  color: var(--encre-douce);
+}
+
+.metrique__valeur {
+  grid-area: valeur;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--bleu-profond);
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.34em;
+}
+
+/* Pastille de provenance : pleine = chiffre du document, creuse = estimation */
+.metrique__source {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--bleu);
+}
+.metrique__source--estimation {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--encre-douce);
+  opacity: 0.75;
+}
+
+.metrique__piste {
+  grid-area: piste;
+  position: relative;
+  height: 8px;
+  border-radius: 100px;
+  background: rgba(10, 65, 118, 0.1);
+  overflow: hidden;
+}
+
+/* La largeur finale est portée par --barre-largeur et l'arrivée est jouée par une
+   animation : pas de dépendance au moment où le nœud entre dans le document,
+   contrairement à une transition qu'il faut déclencher après insertion. */
+.metrique__barre {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--barre-largeur, 0%);
+  border-radius: 100px;
+  background: var(--barre-couleur, var(--bleu));
+  animation: pousse-barre 880ms cubic-bezier(0.22, 1, 0.36, 1) var(--barre-delai, 0ms) both;
+}
+
+@keyframes pousse-barre {
+  from { width: 0%; }
+  to { width: var(--barre-largeur, 0%); }
+}
+.metrique__barre--estimation {
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.42) 0 5px,
+    rgba(255, 255, 255, 0) 5px 11px
+  );
+}
+
+/* Repère : moyenne des 7 solutions sur cet axe */
+.metrique__repere {
+  position: absolute;
+  top: -3px; bottom: -3px;
+  width: 2px;
+  background: var(--bleu-nuit);
+  opacity: 0.45;
+  border-radius: 2px;
+  transform: translateX(-1px);
+}
+
+.metriques__legende {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin-top: 0.7rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--trait);
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: var(--encre-douce);
+}
+.metriques__legende span { display: inline-flex; align-items: center; gap: 0.4em; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

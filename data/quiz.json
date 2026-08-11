@@ -1,0 +1,237 @@
+[
+  {
+    "id": "q01",
+    "solutionId": "pac-hybride",
+    "theme": "Performance",
+    "difficulte": 1,
+    "question": "Quelle solution permet d'atteindre jusqu'à −70 % d'émissions de CO₂ par rapport à une ancienne chaudière ?",
+    "reponses": [
+      "La pompe à chaleur hybride",
+      "La chaudière THPE seule",
+      "La chaudière THPE + poêle à bois",
+      "La chaudière THPE + chauffe-eau thermodynamique"
+    ],
+    "bonne": 0,
+    "explication": "La PAC hybride cumule un gain moyen de 2 classes DPE et jusqu'à −70 % de CO₂ : c'est la solution la plus performante du panel sur le carbone."
+  },
+  {
+    "id": "q02",
+    "solutionId": "thpe-cesi",
+    "theme": "Eau chaude sanitaire",
+    "difficulte": 1,
+    "question": "De combien le chauffe-eau solaire individuel (CESI) réduit-il la consommation d'eau chaude sanitaire, par rapport à une chaudière THPE seule ?",
+    "reponses": ["−50 %", "−20 %", "−70 %", "−90 %"],
+    "bonne": 0,
+    "explication": "Le CESI divise par deux la consommation liée à l'eau chaude sanitaire. Sa durée de vie annoncée est de 30 ans."
+  },
+  {
+    "id": "q03",
+    "solutionId": "thpe-seule",
+    "theme": "Performance",
+    "difficulte": 1,
+    "question": "Quelles économies d'énergie une chaudière THPE seule apporte-t-elle face à une ancienne chaudière ?",
+    "reponses": ["20 à 30 %", "5 à 10 %", "40 à 50 %", "60 à 70 %"],
+    "bonne": 0,
+    "explication": "La condensation — récupération de la chaleur des fumées — apporte 20 à 30 % d'économies et fait gagner 1 classe DPE."
+  },
+  {
+    "id": "q04",
+    "solutionId": "pac-hybride",
+    "theme": "Fonctionnement",
+    "difficulte": 2,
+    "question": "Sur une PAC hybride, qu'est-ce qui décide à chaque instant d'utiliser la pompe à chaleur ou la chaudière gaz ?",
+    "reponses": [
+      "Une régulation intelligente",
+      "Un interrupteur manuel dans le salon",
+      "Un programmateur hebdomadaire réglé à la pose",
+      "Le fournisseur d'énergie, à distance"
+    ],
+    "bonne": 0,
+    "explication": "Par temps doux la PAC assure seule le chauffage ; quand les conditions se dégradent, la régulation bascule vers la chaudière ou fait fonctionner les deux ensemble."
+  },
+  {
+    "id": "q05",
+    "solutionId": "thpe-ssc",
+    "theme": "Reconnaître la solution",
+    "difficulte": 2,
+    "question": "Quelle solution utilise le solaire à la fois pour le chauffage ET pour l'eau chaude sanitaire ?",
+    "reponses": [
+      "Le système solaire combiné (SSC)",
+      "Le chauffe-eau solaire individuel (CESI)",
+      "Le chauffe-eau thermodynamique",
+      "La PAC air/air réversible"
+    ],
+    "bonne": 0,
+    "explication": "C'est toute la différence avec le CESI, qui ne couvre que l'eau chaude sanitaire. Le SSC stocke la chaleur dans un ballon qui alimente aussi le chauffage."
+  },
+  {
+    "id": "q06",
+    "solutionId": "thpe-pac-air-air",
+    "theme": "Confort",
+    "difficulte": 1,
+    "question": "Quel avantage la PAC air/air réversible apporte-t-elle, qu'aucune autre solution du panel n'offre ?",
+    "reponses": [
+      "La climatisation en été",
+      "L'eau chaude sanitaire en continu",
+      "L'autonomie totale en cas de coupure de gaz",
+      "La production d'électricité"
+    ],
+    "bonne": 0,
+    "explication": "Réversible, elle rafraîchit en été et donne un appoint de chauffage en mi-saison, dans les pièces équipées (40 % ou 75 % de la surface selon l'hypothèse)."
+  },
+  {
+    "id": "q07",
+    "solutionId": "thpe-cet",
+    "theme": "Budget",
+    "difficulte": 2,
+    "question": "Quel est l'ordre de grandeur du budget annoncé pour une chaudière THPE + chauffe-eau thermodynamique ?",
+    "reponses": ["Environ 10 000 €", "Environ 3 000 €", "Environ 25 000 €", "Environ 50 000 €"],
+    "bonne": 0,
+    "explication": "Environ 10 000 €, soit moins qu'une pompe à chaleur — c'est l'argument budget de cette solution."
+  },
+  {
+    "id": "q08",
+    "solutionId": "thpe-poele-bois",
+    "theme": "Argumentaire filière",
+    "difficulte": 2,
+    "question": "Pour l'artisan, quel est l'atout commercial du poêle à bois associé à une chaudière THPE ?",
+    "reponses": [
+      "C'est un produit visible, désirable et vendeur",
+      "Il est entièrement pris en charge par les aides",
+      "Il supprime l'entretien annuel de la chaudière",
+      "Il se pose sans conduit d'évacuation"
+    ],
+    "bonne": 0,
+    "explication": "Le poêle se voit dans la pièce de vie : c'est un produit d'envie. Autre atout filière : l'installation reste simple, sans réglages croisés complexes entre les deux systèmes."
+  },
+  {
+    "id": "q09",
+    "solutionId": "pac-hybride",
+    "theme": "Performance",
+    "difficulte": 2,
+    "question": "Combien de classes DPE la pompe à chaleur hybride fait-elle gagner en moyenne ?",
+    "reponses": ["2 classes", "1 classe", "3 classes", "Aucune"],
+    "bonne": 0,
+    "explication": "2 classes en moyenne — le meilleur gain du panel, devant le SSC (1 à 2 classes) et les solutions à 1 classe."
+  },
+  {
+    "id": "q10",
+    "solutionId": "thpe-cet",
+    "theme": "Fonctionnement",
+    "difficulte": 3,
+    "question": "Un chauffe-eau thermodynamique, c'est en réalité :",
+    "reponses": [
+      "Une petite pompe à chaleur alimentée à l'électricité",
+      "Un ballon chauffé par des capteurs solaires",
+      "Un échangeur branché sur les fumées de la chaudière",
+      "Une résistance électrique haute performance"
+    ],
+    "bonne": 0,
+    "explication": "Il capte les calories de l'air pour chauffer l'eau, avec une alimentation électrique. La chaudière assure le relai automatique si besoin."
+  },
+  {
+    "id": "q11",
+    "solutionId": "thpe-ssc",
+    "theme": "Argumentaire filière",
+    "difficulte": 3,
+    "question": "Quelle solution est décrite comme celle au panier moyen le plus élevé et à la plus forte différenciation ?",
+    "reponses": [
+      "La chaudière THPE + système solaire combiné",
+      "La chaudière THPE seule",
+      "La chaudière THPE + chauffe-eau thermodynamique",
+      "La chaudière THPE + poêle à bois"
+    ],
+    "bonne": 0,
+    "explication": "Panier moyen élevé, forte différenciation, image d'expert, projet valorisant techniquement : le SSC est le chantier vitrine de l'artisan."
+  },
+  {
+    "id": "q12",
+    "solutionId": "thpe-seule",
+    "theme": "Fonctionnement",
+    "difficulte": 2,
+    "question": "D'où vient le rendement très élevé d'une chaudière à condensation ?",
+    "reponses": [
+      "Elle récupère la chaleur contenue dans les fumées",
+      "Elle brûle le gaz à plus haute température",
+      "Elle stocke l'eau chaude dans un ballon isolé",
+      "Elle module la pression du réseau de gaz"
+    ],
+    "bonne": 0,
+    "explication": "La condensation des fumées récupère une chaleur habituellement perdue par le conduit. Technologie mature, pose rapide et adaptable au réseau existant."
+  },
+  {
+    "id": "q13",
+    "solutionId": "thpe-poele-bois",
+    "theme": "Reconnaître la solution",
+    "difficulte": 1,
+    "question": "Quelle solution repose sur deux sources de chauffage totalement indépendantes ?",
+    "reponses": [
+      "La chaudière THPE + poêle à bois",
+      "La chaudière THPE seule",
+      "La chaudière THPE + chauffe-eau solaire individuel",
+      "La pompe à chaleur hybride"
+    ],
+    "bonne": 0,
+    "explication": "Le poêle fonctionne sans lien technique avec la chaudière : c'est un gage de fiabilité si l'un des deux est indisponible. La PAC hybride, elle, pilote ses deux générateurs ensemble."
+  },
+  {
+    "id": "q14",
+    "solutionId": "pac-hybride",
+    "theme": "Fonctionnement",
+    "difficulte": 3,
+    "question": "Quelle part des besoins de chauffage la PAC hybride garantit-elle ?",
+    "reponses": ["100 %", "70 %", "50 %", "Cela dépend de la région"],
+    "bonne": 0,
+    "explication": "La chaudière gaz sert de garantie de puissance : quelles que soient les conditions extérieures, 100 % des besoins sont couverts."
+  },
+  {
+    "id": "q15",
+    "solutionId": null,
+    "theme": "Gaz renouvelables",
+    "difficulte": 3,
+    "question": "Quelles sont les deux filières qui injectent du gaz renouvelable dans le réseau, en amont de ces solutions ?",
+    "reponses": [
+      "La méthanisation et la méthanation",
+      "L'hydrolyse et la pyrolyse",
+      "La cogénération et la géothermie",
+      "Le gaz de schiste et le gaz naturel liquéfié"
+    ],
+    "bonne": 0,
+    "explication": "La méthanisation produit du biométhane à partir de déchets organiques agricoles ; la méthanation combine hydrogène issu d'électricité renouvelable et CO₂ pour former du méthane de synthèse."
+  },
+  {
+    "id": "q16",
+    "solutionId": "thpe-cesi",
+    "theme": "Performance",
+    "difficulte": 2,
+    "question": "Quelle est la durée de vie annoncée d'un chauffe-eau solaire individuel ?",
+    "reponses": ["30 ans", "10 ans", "15 ans", "50 ans"],
+    "bonne": 0,
+    "explication": "30 ans, contre environ 20 ans pour une chaudière THPE : c'est un équipement qui s'amortit sur le très long terme."
+  },
+  {
+    "id": "q17",
+    "solutionId": "thpe-pac-air-air",
+    "theme": "Argumentaire filière",
+    "difficulte": 3,
+    "question": "Quelle part de la surface du logement sert d'hypothèse de calcul pour la PAC air/air réversible ?",
+    "reponses": ["40 % ou 75 %", "25 % ou 50 %", "60 % ou 90 %", "100 % systématiquement"],
+    "bonne": 0,
+    "explication": "Les deux scénarios chiffrés du document portent sur 40 % et 75 % de la surface équipée en climatisation."
+  },
+  {
+    "id": "q18",
+    "solutionId": "thpe-seule",
+    "theme": "Budget",
+    "difficulte": 1,
+    "question": "Parmi ces solutions, laquelle affiche le prix d'achat le plus compétitif ?",
+    "reponses": [
+      "La chaudière THPE seule",
+      "La pompe à chaleur hybride",
+      "Le système solaire combiné",
+      "Le chauffe-eau solaire individuel"
+    ],
+    "bonne": 0,
+    "explication": "La THPE seule est l'entrée de gamme du panel : prix compétitif, pose rapide, technologie maîtrisée. À l'opposé, le SSC affiche le panier moyen le plus élevé."
+  }
+]

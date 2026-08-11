@@ -1,0 +1,280 @@
+[
+  {
+    "id": "thpe-poele-bois",
+    "num": 1,
+    "titre": "Chaudière THPE et poêle à bois",
+    "titreCourt": "THPE + poêle à bois",
+    "picto": "assets/pictos/01_chaudiere-THPE-poele-a-bois.png",
+    "hotspot": { "x": 58.09, "y": 26.21, "r": 2.74 },
+    "ancrageFiche": "droite",
+
+    "accroche": "La chaleur du bois en complément du gaz : un confort naturel et une part d'énergie renouvelable.",
+    "resume": "Une chaudière gaz à condensation assure le chauffage et l'eau chaude. Un poêle à bois indépendant vient en appoint, pour le confort et l'image.",
+
+    "chiffresCles": [
+      { "valeur": "2", "unite": "", "libelle": "sources de chauffage indépendantes", "source": "document" },
+      { "valeur": "Bois", "unite": "", "libelle": "une énergie renouvelable et locale", "source": "document" }
+    ],
+
+    "descriptionTitre": "Description technique",
+    "description": "Système combinant une chaudière gaz à condensation (THPE) assurant le chauffage principal et l'eau chaude sanitaire, avec un poêle à bois indépendant (bûches ou granulés) utilisé en appoint.",
+
+    "avantagesClients": [
+      "Confort thermique rapide et agréable",
+      "Utilisation du bois, une énergie renouvelable et locale : gain sur étiquette GES",
+      "Fiabilité : 2 sources différentes de chauffage",
+      "Image chaleureuse et conviviale"
+    ],
+    "avantagesFiliere": [
+      "Poêle = produit visible, désirable et vendeur",
+      "Installation assez simple sans montage technique complexe entre les deux systèmes (peu de réglages croisés à gérer)"
+    ],
+
+    "metrics": {
+      "economies": { "v": 2.5, "label": "n.c.", "source": "estimation" },
+      "dpe": { "v": 2, "label": "gain GES", "source": "estimation" },
+      "co2": { "v": 3, "label": "gain GES", "source": "document" },
+      "enr": { "v": 4, "label": "bois", "source": "document" },
+      "budget": { "v": 3.5, "label": "maîtrisé", "source": "estimation" }
+    }
+  },
+
+  {
+    "id": "thpe-cesi",
+    "num": 2,
+    "titre": "Chaudière THPE + chauffe-eau solaire individuel",
+    "titreCourt": "THPE + CESI",
+    "picto": "assets/pictos/02_chaudiere-THPE-chauffe-eau-solaire-individuel.png",
+    "hotspot": { "x": 56.86, "y": 81.86, "r": 4.29 },
+    "ancrageFiche": "droite",
+
+    "accroche": "Le solaire au service de votre eau chaude, pour intégrer davantage d'énergie renouvelable dans votre logement.",
+    "resume": "Des capteurs solaires en toiture préchauffent l'eau chaude sanitaire stockée dans un ballon. La chaudière THPE prend le relais quand le soleil ne suffit pas.",
+
+    "chiffresCles": [
+      { "valeur": "−50", "unite": "%", "libelle": "sur l'eau chaude sanitaire vs THPE seule", "source": "document" },
+      { "valeur": "30", "unite": "ans", "libelle": "de durée de vie", "source": "document" }
+    ],
+
+    "descriptionTitre": "Description technique",
+    "description": "Une chaudière gaz THPE combinée à un Chauffe-Eau Solaire Individuel. La chaudière THPE assure le chauffage du logement (radiateurs ou plancher chauffant) et le complément de production d'eau chaude sanitaire lorsque l'énergie solaire est insuffisante. Le CESI est composé de capteurs solaires thermiques installés en toiture et d'un ballon de stockage d'eau chaude.",
+
+    "avantagesClients": [
+      "Consommation d'énergie réduite : −50 % sur l'eau chaude sanitaire par rapport à une chaudière THPE seule",
+      "Longue durée de vie : 30 ans"
+    ],
+    "avantagesFiliere": [
+      "Produit différenciant"
+    ],
+
+    "metrics": {
+      "economies": { "v": 3, "label": "−50 % ECS", "source": "document" },
+      "dpe": { "v": 2, "label": "n.c.", "source": "estimation" },
+      "co2": { "v": 3, "label": "n.c.", "source": "estimation" },
+      "enr": { "v": 4, "label": "solaire thermique", "source": "document" },
+      "budget": { "v": 2, "label": "investissement", "source": "estimation" }
+    }
+  },
+
+  {
+    "id": "thpe-seule",
+    "num": 3,
+    "titre": "Chaudière à très haute performance énergétique",
+    "titreCourt": "THPE seule",
+    "picto": "assets/pictos/03_chaudiere-THPE-seule.png",
+    "hotspot": { "x": 72.32, "y": 55.74, "r": 3.46 },
+    "ancrageFiche": "gauche",
+
+    "accroche": "Le confort immédiat et la maîtrise des dépenses sans changer vos habitudes.",
+    "resume": "La référence : une chaudière à condensation qui récupère la chaleur des fumées. Prix d'achat compétitif, technologie mature, pose rapide.",
+
+    "chiffresCles": [
+      { "valeur": "−20 à −30", "unite": "%", "libelle": "d'économies vs une ancienne chaudière", "source": "document" },
+      { "valeur": "20", "unite": "ans", "libelle": "de durée de vie environ", "source": "document" },
+      { "valeur": "+1", "unite": "classe", "libelle": "DPE vs chaudière ancienne", "source": "document" }
+    ],
+
+    "descriptionTitre": "Principe et fonctionnement",
+    "description": "La chaudière THPE reste la meilleure solution pour garantir les plus hauts niveaux de confort pour le chauffage et la production d'ECS, tout en réduisant les consommations grâce à un rendement très élevé (récupération de la chaleur des fumées = condensation).",
+    "noteRedaction": "Seule fiche du document source à employer l'intitulé « Principe et fonctionnement » plutôt que « Description technique » — à harmoniser avec GRDF.",
+
+    "avantagesClients": [
+      "Prix d'achat compétitif",
+      "Confort thermique élevé, ECS disponible en continu",
+      "Factures maîtrisées : −20 % à −30 % d'économies d'énergie vs ancienne chaudière",
+      "Robuste, durée de vie d'environ 20 ans",
+      "Gain de 1 classe DPE vs chaudière ancienne"
+    ],
+    "avantagesFiliere": [
+      "Installation rapide, peu complexe et adaptable au réseau existant",
+      "Technologie mature, bien maîtrisée"
+    ],
+
+    "metrics": {
+      "economies": { "v": 2, "label": "−20 à −30 %", "source": "document" },
+      "dpe": { "v": 2, "label": "+1 classe", "source": "document" },
+      "co2": { "v": 2, "label": "n.c.", "source": "estimation" },
+      "enr": { "v": 1, "label": "gaz seul", "source": "estimation" },
+      "budget": { "v": 5, "label": "prix compétitif", "source": "document" }
+    }
+  },
+
+  {
+    "id": "pac-hybride",
+    "num": 4,
+    "titre": "Pompe à chaleur hybride",
+    "titreCourt": "PAC hybride",
+    "picto": "assets/pictos/04_pompe-a-chaleur-hybride.png",
+    "hotspot": { "x": 41.31, "y": 79.62, "r": 3.63 },
+    "ancrageFiche": "droite",
+
+    "accroche": "La bonne énergie au bon moment pour un chauffage plus économique toute l'année.",
+    "resume": "Une régulation intelligente arbitre en continu entre la pompe à chaleur (temps doux) et la chaudière gaz (grand froid). L'offre la plus performante du panel.",
+
+    "chiffresCles": [
+      { "valeur": "30 à 40", "unite": "%", "libelle": "d'économies vs une ancienne chaudière", "source": "document" },
+      { "valeur": "+2", "unite": "classes", "libelle": "DPE en moyenne", "source": "document" },
+      { "valeur": "−70", "unite": "%", "libelle": "d'émissions de CO₂ (jusqu'à)", "source": "document" }
+    ],
+
+    "descriptionTitre": "Description technique",
+    "description": "La PAC Hybride associe une chaudière gaz, une pompe à chaleur air/eau de faible puissance et une régulation intelligente. Par temps doux, la PAC assure seule le chauffage ; si les conditions se dégradent, la régulation bascule vers la chaudière gaz ou fait fonctionner les deux équipements simultanément. Garantit 100 % des besoins de chauffage.",
+
+    "avantagesClients": [
+      "Confort garanti par la chaudière en hiver, PAC plus silencieuse (petite puissance)",
+      "Économies d'énergie : 30 à 40 % vs une ancienne chaudière",
+      "Impact carbone : gain de 2 classes DPE en moyenne, jusqu'à −70 % d'émissions de CO₂ vs ancienne chaudière"
+    ],
+    "avantagesFiliere": [
+      "Offre premium à forte valeur ajoutée",
+      "Réseau d'installateurs qualifiés PAC hybride"
+    ],
+
+    "metrics": {
+      "economies": { "v": 4, "label": "30 à 40 %", "source": "document" },
+      "dpe": { "v": 4, "label": "+2 classes", "source": "document" },
+      "co2": { "v": 5, "label": "jusqu'à −70 %", "source": "document" },
+      "enr": { "v": 4, "label": "aérothermie", "source": "document" },
+      "budget": { "v": 2, "label": "offre premium", "source": "document" }
+    }
+  },
+
+  {
+    "id": "thpe-pac-air-air",
+    "num": 5,
+    "titre": "Chaudière à très haute performance énergétique + PAC air/air réversible",
+    "titreCourt": "THPE + PAC air/air",
+    "picto": "assets/pictos/05_chaudiere-THPE-PAC-air-air-reversible.png",
+    "hotspot": { "x": 67.71, "y": 70.37, "r": 3.88 },
+    "ancrageFiche": "gauche",
+
+    "accroche": "Le confort été comme hiver, avec une solution qui allie performance gaz et énergie renouvelable.",
+    "resume": "La chaudière THPE reste le générateur principal ; la PAC air/air climatise les pièces équipées (40 % ou 75 % de la surface) et donne un appoint de chauffage en mi-saison.",
+
+    "chiffresCles": [
+      { "valeur": "≈40", "unite": "%", "libelle": "d'économies d'énergie en moyenne", "source": "document" },
+      { "valeur": "+1", "unite": "étiquette", "libelle": "DPE en moyenne", "source": "document" },
+      { "valeur": "40 / 75", "unite": "%", "libelle": "de surface équipée (hypothèses de calcul)", "source": "document" }
+    ],
+
+    "descriptionTitre": "Description technique",
+    "description": "La chaudière THPE reste le générateur principal pour le chauffage et l'ECS. La PAC air/air assure, dans les pièces équipées (40 % ou 75 % de la surface dans l'hypothèse de calcul), la climatisation ; réversible, elle peut aussi apporter un appoint de chauffage en mi-saison.",
+
+    "avantagesClients": [
+      "Confort toute l'année avec la clim intégrée",
+      "Utilisation d'une ENR",
+      "Gain de 1 étiquette DPE en moyenne",
+      "Environ 40 % d'économies d'énergie en moyenne"
+    ],
+    "avantagesFiliere": [
+      "Marché de la climatisation en essor",
+      "Valorisation de la complémentarité gaz et climatisation"
+    ],
+
+    "metrics": {
+      "economies": { "v": 4, "label": "≈40 %", "source": "document" },
+      "dpe": { "v": 2, "label": "+1 étiquette", "source": "document" },
+      "co2": { "v": 3, "label": "n.c.", "source": "estimation" },
+      "enr": { "v": 3, "label": "aérothermie", "source": "document" },
+      "budget": { "v": 3, "label": "n.c.", "source": "estimation" }
+    }
+  },
+
+  {
+    "id": "thpe-cet",
+    "num": 6,
+    "titre": "Chaudière à très haute performance énergétique + chauffe-eau thermodynamique",
+    "titreCourt": "THPE + chauffe-eau thermodynamique",
+    "picto": "assets/pictos/06_chaudiere-THPE-chauffe-eau-thermodynamique.png",
+    "hotspot": { "x": 66.53, "y": 39.96, "r": 3.88 },
+    "ancrageFiche": "gauche",
+
+    "accroche": "Une eau chaude plus sobre au quotidien pour accompagner la modernisation énergétique du logement.",
+    "resume": "L'eau chaude sanitaire est confiée à un chauffe-eau thermodynamique — une petite pompe à chaleur. La chaudière gère le chauffage et prend le relais si besoin.",
+
+    "chiffresCles": [
+      { "valeur": "≈10 000", "unite": "€", "libelle": "soit moins cher qu'une PAC", "source": "document" }
+    ],
+
+    "descriptionTitre": "Description technique",
+    "description": "La chaudière THPE assure le chauffage (et parfois l'appoint ECS), tandis que la production d'eau chaude sanitaire est confiée à un chauffe-eau thermodynamique (petite pompe à chaleur, alimentation électrique).",
+
+    "avantagesClients": [
+      "Forte réduction de la consommation ECS",
+      "Moins chère qu'une PAC : environ 10 000 €",
+      "Réduction des émissions de CO₂",
+      "Confort : relai automatique par la chaudière si besoin"
+    ],
+    "avantagesFiliere": [
+      "Pose et SAV simples"
+    ],
+
+    "metrics": {
+      "economies": { "v": 3, "label": "forte baisse ECS", "source": "document" },
+      "dpe": { "v": 2, "label": "n.c.", "source": "estimation" },
+      "co2": { "v": 3, "label": "réduction", "source": "document" },
+      "enr": { "v": 3, "label": "aérothermie ECS", "source": "document" },
+      "budget": { "v": 4, "label": "≈10 000 €", "source": "document" }
+    }
+  },
+
+  {
+    "id": "thpe-ssc",
+    "num": 7,
+    "titre": "Chaudière à très haute performance énergétique + système solaire combiné",
+    "titreCourt": "THPE + système solaire combiné",
+    "picto": "assets/pictos/07_chaudiere-THPE-systeme-solaire-combine.png",
+    "hotspot": { "x": 27.69, "y": 75.97, "r": 4.25 },
+    "ancrageFiche": "droite",
+
+    "accroche": "Le solaire comme ressource majeure pour réduire les besoins de chauffage et intégrer plus d'énergie renouvelable.",
+    "resume": "Le solaire alimente ici le chauffage ET l'eau chaude, via un ballon tampon. La solution la plus engagée du panel côté ENR — et le panier moyen le plus élevé.",
+
+    "chiffresCles": [
+      { "valeur": "+1 à +2", "unite": "étiquettes", "libelle": "DPE gagnées", "source": "document" },
+      { "valeur": "Chauffage", "unite": "+ ECS", "libelle": "couverts par le solaire", "source": "document" }
+    ],
+
+    "descriptionTitre": "Description technique",
+    "description": "Le SSC capte la chaleur du soleil via des capteurs thermiques et la stocke dans un ballon pour alimenter chauffage et eau chaude. Quand le solaire ne suffit plus, la chaudière THPE prend le relais.",
+
+    "avantagesClients": [
+      "Forte réduction de la facture énergétique",
+      "Valorisation environnementale élevée : gain de 1 à 2 étiquettes DPE"
+    ],
+    "avantagesFiliere": [
+      "Panier moyen élevé",
+      "Forte différenciation",
+      "Image d'expert",
+      "Projet valorisant techniquement"
+    ],
+
+    "metrics": {
+      "economies": { "v": 4, "label": "forte baisse", "source": "document" },
+      "dpe": { "v": 3, "label": "+1 à +2", "source": "document" },
+      "co2": { "v": 4, "label": "n.c.", "source": "estimation" },
+      "enr": { "v": 5, "label": "solaire chauffage + ECS", "source": "document" },
+      "budget": { "v": 1, "label": "panier élevé", "source": "document" }
+    }
+  }
+]

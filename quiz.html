@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quiz — Choisir le gaz, c'est choisir l'avenir</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/jeu.css">
+</head>
+<body class="jeu">
+  <div class="fond-illustre" aria-hidden="true"></div>
+
+  <main class="plaque verre">
+
+    <!-- Accueil -->
+    <section class="ecran est-actif" id="ecranAccueil">
+      <div class="jeu-entete">
+        <div class="jeu-entete__filet"></div>
+        <div>
+          <h1 id="quizTitre"></h1>
+          <p id="quizSousTitre"></p>
+        </div>
+        <div class="jeu-entete__actions">
+          <a class="btn btn--fantome" href="index.html">← La frise</a>
+        </div>
+      </div>
+      <p style="margin:0 0 1.4rem;font-size:.92rem;line-height:1.6;color:var(--encre-douce);max-width:44rem">
+        Les questions portent sur les 7 solutions gaz de la frise : chiffres clés, principe de
+        fonctionnement et arguments de vente. Chaque réponse est commentée, avec un lien vers la
+        fiche correspondante.
+      </p>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+        <button class="btn btn--jaune" id="btnDemarrer">Commencer le quiz</button>
+        <a class="btn btn--vert" href="host.html">Jouer en groupe (mode animateur)</a>
+      </div>
+    </section>
+
+    <!-- Question en cours -->
+    <section class="ecran" id="ecranQuestion" aria-live="polite">
+      <div class="progression">
+        <span id="progressionTexte"></span>
+        <div class="progression__piste"><div class="progression__barre" id="progressionBarre"></div></div>
+        <span id="progressionScore"></span>
+      </div>
+
+      <span class="question__theme" id="questionTheme"></span>
+      <h2 class="question__texte" id="questionTexte"></h2>
+      <div class="reponses" id="reponses"></div>
+
+      <div class="explication" id="explication">
+        <div><div class="explication__contenu">
+          <p style="margin:0" id="explicationTexte"></p>
+          <a class="explication__lien" id="explicationLien" href="index.html" hidden>
+            Voir la fiche
+            <svg width="11" height="9" viewBox="0 0 12 10" aria-hidden="true"><path d="M7 1l4 4-4 4M11 5H1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </a>
+        </div></div>
+      </div>
+
+      <div class="jeu-pied">
+        <span class="score">Bonnes réponses <b id="scoreCourant">0</b></span>
+        <button class="btn" id="btnSuivante" hidden>Question suivante</button>
+      </div>
+    </section>
+
+    <!-- Bilan -->
+    <section class="ecran" id="ecranBilan">
+      <div class="jeu-entete">
+        <div class="jeu-entete__filet"></div>
+        <div><h1>Votre résultat</h1></div>
+        <div class="jeu-entete__actions"><a class="btn btn--fantome" href="index.html">← La frise</a></div>
+      </div>
+
+      <div class="bilan">
+        <div class="bilan__score" id="bilanScore"></div>
+        <p class="bilan__mention" id="bilanMention"></p>
+        <p class="bilan__detail" id="bilanDetail"></p>
+      </div>
+
+      <div class="revue" id="revue"></div>
+
+      <div class="jeu-pied">
+        <span class="score"></span>
+        <button class="btn btn--fantome" id="btnRejouer">Recommencer</button>
+        <a class="btn btn--jaune" href="index.html">Explorer la frise</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

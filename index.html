@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Choisir le gaz, c'est choisir l'avenir — GRDF</title>
+  <meta name="description" content="Frise digitale interactive : les 7 solutions gaz, à chaque bâtiment la sienne.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/frise.css">
+</head>
+<body class="frise">
+
+  <main class="scene">
+    <div class="scene__cadre" id="cadre">
+      <img class="scene__image" id="visuel" src="assets/ville.png" alt="Illustration d'un quartier : sept bâtiments équipés chacun d'une solution gaz." draggable="false">
+      <div class="cibles" id="cibles"></div>
+    </div>
+  </main>
+  <div class="scene__voile" id="voile"></div>
+
+  <header class="entete" id="entete">
+    <div class="entete__filet"></div>
+    <h1 class="entete__titre" id="titre"></h1>
+    <p class="entete__sous-titre" id="sousTitre"></p>
+    <p class="entete__accroche" id="accroche"></p>
+  </header>
+
+  <!-- Fiche solution : étape 1 visible d'emblée, étape 2 dépliable -->
+  <article class="fiche verre" id="fiche" data-ancrage="droite" aria-labelledby="ficheTitre" aria-live="polite">
+    <button class="fiche__fermer" id="ficheFermer" aria-label="Fermer la fiche">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="fiche__defilement" id="ficheDefilement">
+      <div class="fiche__haut">
+        <div>
+          <span class="fiche__numero" id="ficheNumero"></span>
+          <h2 class="fiche__titre" id="ficheTitre"></h2>
+        </div>
+        <img class="fiche__picto" id="fichePicto" src="" alt="">
+      </div>
+
+      <p class="fiche__accroche" id="ficheAccroche"></p>
+      <p class="fiche__resume" id="ficheResume"></p>
+      <div class="chiffres" id="ficheChiffres"></div>
+
+      <section class="fiche__metriques">
+        <h3>Positionnement de la solution</h3>
+        <div class="metriques" id="ficheMetriques"></div>
+        <div class="metriques__legende" id="ficheLegende"></div>
+      </section>
+
+      <button class="btn btn--fantome fiche__deplier" id="ficheDeplier" aria-expanded="false" aria-controls="ficheDetail">
+        <span id="ficheDeplierTexte">En savoir plus</span>
+        <svg class="chevron" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5L6 6.5l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </button>
+
+      <div class="fiche__detail" id="ficheDetail">
+        <div>
+          <div class="fiche__detail-contenu">
+            <section class="bloc">
+              <h3 class="bloc__titre" id="ficheDescriptionTitre"></h3>
+              <p class="bloc__texte" id="ficheDescription"></p>
+            </section>
+
+            <div class="avantages">
+              <div class="avantages__col">
+                <h4>
+                  <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 1.6a3 3 0 100 6 3 3 0 000-6zM2.4 14.4a5.6 5.6 0 0111.2 0 .8.8 0 01-.8.8H3.2a.8.8 0 01-.8-.8z"/></svg>
+                  Pour le client
+                </h4>
+                <ul id="ficheAvantagesClients"></ul>
+              </div>
+              <div class="avantages__col avantages__col--filiere">
+                <h4>
+                  <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M10.6 1.4a3.9 3.9 0 00-3.4 5.8L1.7 12.7a1.2 1.2 0 000 1.6 1.2 1.2 0 001.6 0l5.5-5.5a3.9 3.9 0 004.9-4.9L11.8 5.8 10.2 4.2l2-1.9a3.9 3.9 0 00-1.6-.9z"/></svg>
+                  Pour la filière
+                </h4>
+                <ul id="ficheAvantagesFiliere"></ul>
+              </div>
+            </div>
+
+            <p class="note-redaction" id="ficheNote" hidden></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="fiche__pied">
+      <button class="btn btn--fantome" id="fichePrec" aria-label="Solution précédente">
+        <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden="true"><path d="M5 1L1 5l4 4M1 5h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </button>
+      <button class="btn btn--fantome" id="ficheSuiv" aria-label="Solution suivante">
+        <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden="true"><path d="M7 1l4 4-4 4M11 5H1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </button>
+      <button class="btn btn--fantome" id="ficheComparer">Comparer</button>
+      <span class="fiche__compteur" id="ficheCompteur"></span>
+    </footer>
+  </article>
+
+  <!-- Comparatif des 7 solutions sur un axe -->
+  <section class="comparatif verre" id="comparatif" aria-labelledby="comparatifTitre">
+    <div class="comparatif__entete">
+      <div>
+        <h2 id="comparatifTitre">Comparer les 7 solutions</h2>
+        <p id="comparatifAide"></p>
+      </div>
+      <button class="btn btn--fantome" id="comparatifFermer">Fermer</button>
+    </div>
+    <div class="comparatif__axes" id="comparatifAxes" role="group" aria-label="Axe de comparaison"></div>
+    <div class="classement" id="classement"></div>
+    <div class="metriques__legende" id="comparatifLegende"></div>
+  </section>
+
+  <!-- Amont : les gaz renouvelables -->
+  <section class="contexte verre" id="contexte" aria-labelledby="contexteTitre">
+    <button class="fiche__fermer" id="contexteFermer" aria-label="Fermer">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <h2 id="contexteTitre"></h2>
+    <p class="contexte__chapo" id="contexteChapo"></p>
+    <div class="contexte__grille" id="contexteGrille"></div>
+  </section>
+
+  <nav class="barre-outils verre" aria-label="Outils">
+    <button class="btn btn--fantome" id="btnContexte" title="Les gaz renouvelables en amont du réseau">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm.9 12.2H7.1V7h1.8v5.2zM8 5.6a1 1 0 110-2 1 1 0 010 2z"/></svg>
+      <span>Gaz verts</span>
+    </button>
+    <button class="btn btn--fantome" id="btnComparer">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><rect x="1" y="9" width="14" height="2.4" rx="1.2"/><rect x="1" y="3.6" width="9" height="2.4" rx="1.2"/><rect x="1" y="12.6" width="5" height="2.4" rx="1.2"/></svg>
+      <span>Comparer</span>
+    </button>
+    <div class="barre-outils__sep"></div>
+    <a class="btn btn--jaune" href="quiz.html">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM7.9 12.9a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2zM9.6 8.3c-.6.4-.8.7-.8 1.2v.3H7v-.4c0-1 .4-1.7 1.3-2.2.6-.4.9-.7.9-1.2 0-.6-.4-1-1.1-1-.6 0-1.1.4-1.2 1.1H5.1c.1-1.5 1.2-2.5 2.9-2.5 1.7 0 2.8.9 2.8 2.3 0 .9-.4 1.6-1.2 2.1z"/></svg>
+      <span>Quiz</span>
+    </a>
+    <a class="btn btn--vert" href="host.html" id="btnLive">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M1 1h5v5H1V1zm1.6 1.6v1.8h1.8V2.6H2.6zM10 1h5v5h-5V1zm1.6 1.6v1.8h1.8V2.6h-1.8zM1 10h5v5H1v-5zm1.6 1.6v1.8h1.8v-1.8H2.6zM10 10h2v2h-2v-2zm3 0h2v2h-2v-2zm-3 3h2v2h-2v-2zm3 0h2v2h-2v-2z"/></svg>
+      <span>Mode animateur</span>
+    </a>
+  </nav>
+
+  <script type="module" src="js/frise.js"></script>
+</body>
+</html>
