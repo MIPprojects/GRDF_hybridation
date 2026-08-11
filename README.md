@@ -156,6 +156,37 @@ d'hôtel, réseau d'entreprise), passez par un tunnel et l'option `--url`.
 
 ---
 
+## Déployer sur Cloud Run
+
+```bash
+gcloud auth login
+./deploy-cloudrun.sh <ID_DU_PROJET_GCP>
+```
+
+Le script construit l'image depuis le `Dockerfile` (aucune dépendance npm à
+installer) et déploie en région `europe-west9` (Paris) sous le nom `frise-grdf`,
+tous deux surchargeables en arguments.
+
+**Les options de déploiement ne sont pas cosmétiques.** Les parties du mode
+animateur vivent en mémoire vive, ce qui contraint la configuration :
+
+| Option | Pourquoi |
+|---|---|
+| `--min-instances 1 --max-instances 1` | Animateur et joueurs doivent atterrir sur **la même** instance. À deux instances, un joueur peut ne jamais voir la partie de l'animateur. |
+| `--no-cpu-throttling` | Le minuteur qui révèle la réponse à la fin du chrono est un `setTimeout` : sans CPU alloué en continu, il ne se déclencherait pas. |
+| `--timeout 3600` | Chaque connexion WebSocket compte comme une requête. Le défaut de 300 s couperait la partie au bout de 5 minutes. |
+| `--concurrency 250` | Idem : une connexion = une requête. Le défaut de 80 plafonnerait la salle à 79 participants. |
+| `--allow-unauthenticated` | Les participants scannent le QR sur leur téléphone : ils ne peuvent pas s'authentifier avec un compte Google. |
+
+Corollaire à connaître : **un redéploiement met fin aux parties en cours**, puisque
+l'instance est remplacée. À faire en dehors des sessions d'animation.
+
+Le QR code n'a rien à configurer : l'URL publique est déduite de l'en-tête `Host`
+de la requête (`x-forwarded-proto` / `x-forwarded-host` derrière le proxy Cloud Run),
+et non de l'adresse réseau du conteneur — qui ne serait joignable par personne.
+
+---
+
 ## Recaler les cibles
 
 Si l'illustration est retouchée, les 7 cibles se recalent sans éditer le JSON à la main :
@@ -217,6 +248,9 @@ quand tout le monde a répondu, classement, départ de l'animateur.
 ## Arborescence
 
 ```
+Dockerfile            image Cloud Run (runtime Node seul)
+deploy-cloudrun.sh    déploiement en une commande
+
 index.html            frise interactive
 quiz.html             quiz solo
 host.html             écran animateur (QR code, questions projetées)
@@ -239,7 +273,8 @@ tools/                préparation des visuels et tests
 ## Limites connues
 
 - **Le mode animateur exige que le serveur tourne.** Les parties vivent en mémoire :
-  redémarrer le serveur met fin aux parties en cours.
+  redémarrer le serveur — ou redéployer sur Cloud Run — met fin aux parties en cours.
+  C'est aussi ce qui impose l'instance unique côté Cloud Run.
 - **Un joueur qui perd le réseau** se reconnecte automatiquement mais revient à l'écran
   de connexion : son score reste au serveur, il faut ressaisir le code et le pseudo.
 - **Le zoom de la scène** est calé pour un écran large (16/9). Sous 900 px de large, la
