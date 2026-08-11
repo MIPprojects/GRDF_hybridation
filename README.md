@@ -158,9 +158,26 @@ d'hôtel, réseau d'entreprise), passez par un tunnel et l'option `--url`.
 
 ## Déployer sur Cloud Run
 
+### En ligne
+
+<https://frise-grdf-dg4kewooca-od.a.run.app>
+
+| | |
+|---|---|
+| Frise | <https://frise-grdf-dg4kewooca-od.a.run.app/> |
+| Quiz solo | <https://frise-grdf-dg4kewooca-od.a.run.app/quiz.html> |
+| Animateur | <https://frise-grdf-dg4kewooca-od.a.run.app/host.html> |
+
+Projet `gen-lang-client-0804069470` (DIGITAL AI FACTORY), région `europe-west9`,
+service `frise-grdf`, accès public. L'app est sur l'internet public : l'URL n'est
+pas devinable mais n'est pas protégée — à garder en tête tant que les chiffres ne
+sont pas validés par GRDF.
+
+### Redéployer
+
 ```bash
 gcloud auth login
-./deploy-cloudrun.sh <ID_DU_PROJET_GCP>
+./deploy-cloudrun.sh gen-lang-client-0804069470
 ```
 
 Le script construit l'image depuis le `Dockerfile` (aucune dépendance npm à
